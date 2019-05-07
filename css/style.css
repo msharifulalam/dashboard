@@ -208,6 +208,8 @@ nav#bar{}
   font-weight: 100;
   padding-right: 10px;
   padding-left: 10px;
+  position: relative;
+  top: 2px;
 }
 
 #icone {
@@ -774,12 +776,24 @@ nav#bar{}
   padding-left: 0;
 }
 .tube-cast-2-11 {
-  display: block;
-  height: 100%;
-  overflow-x: hidden;
-  width: 100%;
+    display: flex;
+    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    background: #1f3045;
 }
 #subscribe {
+    height: 300px;
+    overflow: hidden;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+/*#subscribe {
   background: none repeat scroll 0 0 #1f3045;
   display: block;
   float: left;
@@ -792,33 +806,57 @@ nav#bar{}
   margin: 0;
   padding: 0;
 }
-#subscribe ul li{}
+#subscribe ul li{
+  cursor: pointer;
+}
 #subscribe ul li:first-child{}
 #subscribe ul li:last-child {
   padding-bottom: 2px;
-}
-#subscribe ul li a{
+}*/
+#subscribe li a {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-decoration: none;
+    flex: 1;
 }
-#subscribe ul li a:hover, #subscribe ul li a:focus{}
-.text {
+#subscribe li a:hover, #subscribe li a:focus{
   color: #fff;
-  font-size: 16px;
-  margin: 0;
-  padding: 23px 0;
+  text-decoration: none;
+}
+.text {
+    color: #fff;
+    font-size: 16px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#subscribe li a:hover #dumi-icon{
+  color: #EA6060;
 }
 #dumi-icon {
-  font-size: 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
+/*#dumi-icon {
+  font-size: 30px;
+}*/
 #dumi-icon:hover {
   color: #EA6060;
 }
 #tube-video {
+    height: 300px;
+    overflow: hidden;
+    flex: 6;
+}
+/*#tube-video {
   display: block;
   height: 300px;
   overflow: hidden;
   width: 85%;
-}
+}*/
 #frame {
   width: 100%;
   height: 100%;
@@ -1272,7 +1310,7 @@ nav#bar{}
   font-size: 15px;
   font-weight: 100;
   letter-spacing: 1px;
-  margin: 40px 0 18px 0;
+  margin: 45px 0 18px 0;
 }
 .media-body > span {
   color: #4bc7c7;
